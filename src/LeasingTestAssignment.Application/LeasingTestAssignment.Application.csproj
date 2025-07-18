@@ -7,12 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\LeasingTestAssignment.Domain\LeasingTestAssignment.Domain.csproj" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.7" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
-    <Folder Include="Common\" />
+    <ProjectReference Include="..\LeasingTestAssignment.Domain\LeasingTestAssignment.Domain.csproj" />
   </ItemGroup>
 
 </Project>

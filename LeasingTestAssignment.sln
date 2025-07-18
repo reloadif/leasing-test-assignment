@@ -9,12 +9,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36D591C7-65C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeasingTestAssignment.Domain", "src\LeasingTestAssignment.Domain\LeasingTestAssignment.Domain.csproj", "{466292B8-081B-4E2C-8995-C26A6860B400}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeasingTestAssignment.Infrastructure", "LeasingTestAssignment.Infrastructure\LeasingTestAssignment.Infrastructure.csproj", "{DFF95C3F-1CB1-4B6D-BB8A-AD0819E192B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeasingTestAssignment.Infrastructure", "src\LeasingTestAssignment.Infrastructure\LeasingTestAssignment.Infrastructure.csproj", "{DFF95C3F-1CB1-4B6D-BB8A-AD0819E192B2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{466292B8-081B-4E2C-8995-C26A6860B400} = {466292B8-081B-4E2C-8995-C26A6860B400}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeasingTestAssignment.Application", "LeasingTestAssignment.Application\LeasingTestAssignment.Application.csproj", "{232E7721-64B8-4A69-82BD-1E24543CCC2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeasingTestAssignment.Application", "src\LeasingTestAssignment.Application\LeasingTestAssignment.Application.csproj", "{232E7721-64B8-4A69-82BD-1E24543CCC2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{C3C5249B-57CD-4105-85CB-63405EB79F3F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
