@@ -1,4 +1,8 @@
-﻿namespace LeasingTestAssignment.API;
+﻿using LeasingTestAssignment.API.Middlewares;
+using LeasingTestAssignment.Application.Services.DependencyInjection;
+using LeasingTestAssignment.Infrastructure.Persistence.DependencyInjection;
+
+namespace LeasingTestAssignment.API;
 
 public class Startup(IConfiguration configuration)
 {
@@ -6,10 +10,9 @@ public class Startup(IConfiguration configuration)
 
     public void ConfigureServices(IServiceCollection services)
     {
-        //services.AddDatabaseMigrations(_configuration);
-        //services.AddDatabaseContexts(_configuration);
-        //services.AddRepositories();
-        //services.AddLogicServices();
+        services.AddDatabaseContexts(_configuration);
+        services.AddRepositories();
+        services.AddApplicationServices();
 
         services.AddControllers();
 
@@ -24,9 +27,11 @@ public class Startup(IConfiguration configuration)
             app.UseSwaggerUI();
         }
 
-        //app.UseMiddleware<ExceptionHandlingMiddleware>();
+        app.UseMiddleware<ExceptionHandlingMiddleware>();
 
         app.UseHttpsRedirection();
+
+        app.UseRouting();
 
         app.UseEndpoints(builder =>
         {

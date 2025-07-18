@@ -7,18 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Contracts\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\LeasingTestAssignment.Application\LeasingTestAssignment.Application.csproj" />
-    <ProjectReference Include="..\..\LeasingTestAssignment.Infrastructure\LeasingTestAssignment.Infrastructure.csproj" />
+    <ProjectReference Include="..\LeasingTestAssignment.Application\LeasingTestAssignment.Application.csproj" />
     <ProjectReference Include="..\LeasingTestAssignment.Domain\LeasingTestAssignment.Domain.csproj" />
+    <ProjectReference Include="..\LeasingTestAssignment.Infrastructure\LeasingTestAssignment.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
